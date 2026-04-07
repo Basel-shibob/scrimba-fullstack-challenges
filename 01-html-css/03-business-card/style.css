@@ -1,0 +1,107 @@
+/* ===== RESET & PAGE BACKGROUND ===== */
+/* Remove default browser spacing, set a nice background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* padding won't increase element size */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a2e;  /* dark background */
+  display: flex;               /* flexbox on the body! */
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically */
+  min-height: 100vh;           /* vh = viewport height (full screen) */
+}
+
+/* ===== THE CARD ===== */
+.card {
+  background-color: #16213e;
+  color: white;
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;            /* clips the image to card's rounded corners */
+  text-align: center;
+  /* Box model in action: */
+  padding: 30px 20px;          /* shorthand: 30px top/bottom, 20px left/right */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* subtle shadow */
+}
+
+/* ===== PROFILE IMAGE ===== */
+/* Makes the image circular */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;          /* 50% = perfect circle */
+  border: 3px solid #e94560;   /* red border around image */
+  object-fit: cover;           /* crop image to fit without stretching */
+  margin-bottom: 15px;
+}
+
+/* ===== NAME ===== */
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* ===== JOB TITLE ===== */
+.job-title {
+  color: #e94560;
+  font-size: 14px;
+  text-transform: uppercase;   /* makes text ALL CAPS */
+  letter-spacing: 2px;         /* space between letters */
+  margin-bottom: 20px;
+}
+
+/* ===== DIVIDER ===== */
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 15px 0;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 8px 0;
+}
+
+/* ===== BUTTONS CONTAINER ===== */
+/* Flexbox to put buttons side by side */
+.buttons {
+  display: flex;               /* activate flexbox */
+  justify-content: center;     /* center the buttons */
+  gap: 10px;                   /* space between buttons */
+  margin-top: 20px;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn {
+  text-decoration: none;       /* remove underline from links */
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;    /* smooth hover effect */
+}
+
+/* Filled button */
+.btn:first-child {
+  background-color: #e94560;
+  color: white;
+}
+
+/* Outline button */
+.btn-outline {
+  background-color: transparent;
+  color: #e94560;
+  border: 2px solid #e94560;
+}
+
+/* Hover effect for both buttons */
+.btn:hover {
+  opacity: 0.8;
+}
